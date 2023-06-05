@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Kenab_Kushal_KC_2332336.css" />
+    <title>Weather Forecasting Web Application - Current City</title>
+  </head>
+  <body>
+    <section class="all-content">
+      <!-- header -->
+      <header class="search-background">
+        <div class="container">
+          <div class="header">
+            <div class="logo">
+              <img src="Images/logo.png" alt="" />
+            </div>
+            <div class="search-bar">
+              <button type="submit" class="search-logo" onclick="changeCity()">
+                <img
+                  src="Images/search.svg"
+                  alt="Search Icon"
+                  class="iconSearch"
+                />
+              </button>
+              <input
+                class="input-search"
+                type="text"
+                placeholder="Search city"
+                name="cityName"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="data-section">
+        <div class="container flex">
+          <div class="temperature">
+            <div class="city-condition">
+              <div class="main-texts">
+                <h2 class="city-name"></h2>
+                <p class="desc"></p>
+              </div>
+              <div class="weather-icon">
+                <img class="icon-weather" src="" alt="" />
+              </div>
+            </div>
+
+            <div class="degree-celius">
+              <h1 class="main-temperature"></h1>
+            </div>
+          </div>
+          <div class="text">
+            <p>Today's <span>Highlights</span></p>
+          </div>
+          <div class="cards">
+            <div class="date card">
+              <h3><i class="fa-regular fa-calendar-days"></i> Date</h3>
+              <p class="date-time"></p>
+            </div>
+            <div class="pressure card">
+              <h3><i class="fa-solid fa-stopwatch-20"></i> Pressure</h3>
+              <p class="pres"></p>
+            </div>
+            <div class="humidity card">
+              <h3><i class="fa-solid fa-droplet"></i> Humidity</h3>
+              <p class="humdt"></p>
+            </div>
+            <div class="windspeed card">
+              <h3><i class="fa-solid fa-wind"></i> Windspeed</h3>
+              <p class="wind-spd"></p>
+            </div>
+          </div>
+          <div class="button">
+            <div class="btn">
+              <a class="view-more" href="Kenab_Kushal_KC_2332336_2.html"
+                >Full Data
+                <i class="fa-solid fa-arrow-right back"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <div class="load">
+      <div class="loader"></div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/4cbeaa27da.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="Kenab_Kushal_KC_2332336.js"></script>
+  </body>
+</html>

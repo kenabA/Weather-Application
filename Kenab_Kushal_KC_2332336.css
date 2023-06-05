@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLOR   */
+  --body-color: #d7e9cc;
+  --herald-green: #74bf44;
+  --main-color: linear-gradient(#74bf44, #459a0f);
+  --card-color: linear-gradient(#ffffff, #ededed);
+  --card-hover: linear-gradient(#3c3c3c, #1a1a1a);
+  --font-main: #194000;
+  --font-secondary: #f3f3f3;
+
+  /* FONT */
+  --poppins: "Poppins", sans-serif;
+
+  /* DROP SHADOW */
+  --box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: var(--poppins);
+}
+
+.blur {
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+/* -------------THE HEADER------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  align-items: center;
+}
+
+.search-background {
+  background-color: white;
+  height: 75px;
+  box-shadow: var(--box-shadow);
+}
+
+.logo img {
+  width: 38.9px;
+  height: auto;
+}
+
+.loader {
+  border: 8px solid white;
+  border-radius: 50%;
+  border-top: 8px solid var(--font-main);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  box-shadow: 2px 0.5px 8px rgb(116, 116, 116);
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: 2px solid black;
+  width: 250px;
+  height: 30px;
+  gap: 8.5px;
+}
+
+.input-search {
+  border: none;
+  outline: none;
+  font-family: var(--poppins);
+  font-size: 16px;
+}
+
+.search-logo {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 16.5px;
+  outline: none;
+}
+
+/* -------------THE CONTENT------------- */
+
+/* TEMPERATURE  */
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc {
+  text-transform: capitalize;
+}
+.temperature {
+  background: var(--main-color);
+  width: 705px;
+  min-width: 20px;
+  height: 158px;
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 21px;
+  box-shadow: var(--box-shadow);
+}
+
+.temperature h1 {
+  font-size: 64px;
+  color: var(--font-main);
+  margin-right: 76.41px;
+}
+
+.city-condition {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  align-items: center;
+  margin-left: 76.41px;
+}
+
+.icon-weather {
+  width: 80px;
+}
+
+.temperature h2 {
+  font-weight: bolder;
+  color: var(--font-secondary);
+  font-size: 24px;
+}
+
+.temperature p {
+  color: #f3f3f3;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* TEXT */
+.text p {
+  margin-top: 38px;
+  font-weight: 500;
+  color: var(--font-main);
+}
+span {
+  background-color: var(--font-main);
+  color: var(--font-secondary);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 45px;
+  width: 80%;
+  justify-content: center;
+}
+
+.card {
+  width: 330px;
+  height: 158px;
+  background: var(--card-color) no-repeat;
+  padding-top: 16px;
+  padding-left: 35px;
+  border-radius: 21px;
+  transition: 0.2s ease-in-out;
+}
+
+.cards h3 {
+  font-size: 20px;
+}
+
+i {
+  color: var(--herald-green);
+}
+.card:hover {
+  background: #3c3c3c;
+  color: var(--font-secondary);
+  box-shadow: var(--box-shadow);
+}
+
+.card p {
+  margin-top: 18px;
+}
+
+.btn {
+  margin-top: 70px;
+  color: white;
+  background-color: var(--herald-green);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  padding: 5px;
+  transition: 0.2s;
+  border-radius: 13px;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn a {
+  color: white;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #528e2c;
+  cursor: pointer;
+}
+.back {
+  color: white;
+}
+/*--------- Media Query ---------*/
+
+/* For iPad */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+  .temperature {
+    width: 700px;
+  }
+  .cards {
+    gap: 25px;
+    width: 100%;
+  }
+}
+
+/* For Mobile */
+@media only screen and (max-width: 576px) {
+  .icon-weather {
+    width: 50px;
+  }
+
+  .city-condition {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: row-reverse;
+    gap: 10px;
+    align-items: center;
+    margin-left: 36.41px;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+  .temperature {
+    width: 400px;
+  }
+  .temperature h1 {
+    font-size: 35px;
+    color: var(--font-main);
+    margin-right: 76.41px;
+  }
+
+  .temperature h2 {
+    font-size: 18px;
+  }
+
+  .temperature p {
+    font-size: 15px;
+  }
+
+  .cards h3 {
+    font-size: 18px;
+  }
+
+  .cards p {
+    font-size: 15px;
+  }
+
+  .cards {
+    margin-bottom: 25px;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border: none;
+    width: 250px;
+    height: 30px;
+    gap: 8.5px;
+  }
+
+  .input-search {
+    display: none;
+    border: none;
+    outline: none;
+    font-family: var(--poppins);
+    font-size: 16px;
+  }
+
+  .search-logo {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 16.5px;
+    outline: none;
+  }
+  .search-background {
+    max-width: 100%;
+  }
+
+  .active .input-search {
+    display: block;
+  }
+
+  .active .search-bar {
+    border: 2px solid black;
+    justify-content: start;
+    transition: 0.2s;
+    transform: translateX(-0%);
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .container {
+    max-width: 90%;
+  }
+}
